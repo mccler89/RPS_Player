@@ -15,11 +15,18 @@ __author__ = 'Pat McClernan and Dan Weggman'
 #    and expect it to show up soon
 #   so we will play to beat that move
 class my_rps_player:
-    def my_rps_play(self, past_moves):
+
+    def __init__(self):
 
         rock = 0
         paper = 0
         scissors = 0
+
+
+    def my_rps_play(self,past_moves):
+        rock = self.rock
+        paper = self.paper
+        scissors = self.scissors
 
         for this_move in list(past_moves):
             if this_move == 0:
@@ -40,3 +47,17 @@ class my_rps_player:
         move = (move + 1 )% 3
 
         return move
+
+    def add_moves(self, moves):
+        for this_move in list(moves):
+            if this_move == 0:
+                rock += 1
+            elif this_move == 1:
+                paper += 1
+            elif this_move == 2:
+                scissors += 1
+
+    def reset_moves(self):
+        self.rock = 0
+        self.paper = 0
+        self.scissors = 0
