@@ -23,18 +23,11 @@ class my_rps_player:
         scissors = 0
 
 
-    def my_rps_play(self,past_moves):
+    def my_rps_play(self):
         rock = self.rock
         paper = self.paper
         scissors = self.scissors
 
-        for this_move in list(past_moves):
-            if this_move == 0:
-                rock += 1
-            elif this_move == 1:
-                paper += 1
-            elif this_move == 2:
-                scissors += 1
         #determine which move has been used least
         if (rock < paper) and (rock < scissors):
             move = 0
@@ -51,11 +44,11 @@ class my_rps_player:
     def add_moves(self, moves):
         for this_move in list(moves):
             if this_move == 0:
-                rock += 1
+                self.rock += 1
             elif this_move == 1:
-                paper += 1
+                self.paper += 1
             elif this_move == 2:
-                scissors += 1
+                self.scissors += 1
 
     def reset_moves(self):
         self.rock = 0

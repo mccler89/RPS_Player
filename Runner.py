@@ -1,6 +1,7 @@
+from game_framework import PatAndDansPlayer
+
 __author__ = 'Pat McClernan'
 #used for testing of RPS player
-import PatAndDansPlayer
 
 player = PatAndDansPlayer.PatDansPlayer()
 
